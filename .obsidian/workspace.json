@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "f6580af63fe642a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "c272d43b8410c37b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52b264ec1f14d852",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inspetora_Perifericos_Obsidian/modelo_eventos_interface.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "modelo_eventos_interface"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "436a458a4cc6aa77",
+    "type": "split",
+    "children": [
+      {
+        "id": "62b56bfd50090b48",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97c09700fe1a542f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "a1c9c084ffe9f6ba",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "4e0ffe355fb0f603",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 324.5124969482422
+  },
+  "right": {
+    "id": "569787b61217ff81",
+    "type": "split",
+    "children": [
+      {
+        "id": "9256b591493c7edb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f89138dfdb46ced1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Inspetora_Perifericos_Obsidian/interface_navegacao/interface_event_model.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para interface_event_model"
+            }
+          },
+          {
+            "id": "61a6bb75943f83b7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Inspetora_Perifericos_Obsidian/interface_navegacao/interface_event_model.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para interface_event_model"
+            }
+          },
+          {
+            "id": "4d851fda54482ace",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "33dd302a8ba3bfd6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "a77157e97cadb466",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Inspetora_Perifericos_Obsidian/interface_navegacao/interface_event_model.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de interface_event_model"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "52b264ec1f14d852",
+  "lastOpenFiles": [
+    "Evento CAL-02 — Capturar ponto da calibração de entrada.md",
+    "Inspetora_Perifericos_Obsidian/modelo_eventos_interface.md",
+    "Inspetora_Perifericos_Obsidian/navegação_interface.canvas",
+    "Inspetora_Perifericos_Obsidian/visao_geral_interface.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/programas_de_inspecao.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/visão_computacional.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/persistencia_e_rastreabilidade.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/lógica_clp.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/lista_sensores.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/lista_atuadores.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/calibracao.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/diagrama_estados.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/bandejas_e_regioes_seguranca.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/arquitetura_sistema.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/fluxograma_operacao.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/fluxograma_segurança.md",
+    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/visão_geral.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras/ui_to_backend_mapping.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/menus/menu_calibracoes.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/menus/menu_configuracoes.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras/ui_state_rules.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao/Sem título",
+    "Inspetora_Perifericos_Obsidian/README.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao/melhorias_interface.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao/lacunas_interface.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao/mapa_telas.md",
+    "Inspetora_Perifericos_Obsidian/interface_navegacao/canvas_navegacao_interface.md"
+  ]
+}
