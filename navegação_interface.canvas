@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"d9c469a970a9a9a0","type":"text","text":"# [[mapa_telas|Mapa de Telas]]","x":-380,"y":60,"width":220,"height":50,"color":"4"},
+		{"id":"5ea8467d991d3669","type":"text","text":"# [[tela_inspecao|Tela de Inspeção]]","x":-800,"y":250,"width":250,"height":60},
+		{"id":"045c1873276eff8b","type":"text","text":"# [[tela_projeto|Tela de Projeto]]","x":-387,"y":250,"width":235,"height":60},
+		{"id":"727758330adf200e","type":"text","text":"# [[tela_camera_fiducial|Tela de Câmera Fiducial]]","x":0,"y":250,"width":340,"height":60},
+		{"id":"ea1052da089726d7","type":"text","text":"\n## [[menu_configuracoes|Menu de Configurações]]\n","x":-953,"y":-160,"width":307,"height":50},
+		{"id":"ff5da1c5cb318fa9","type":"text","text":"## [[menu_calibracoes|Menu de Calibrações]]","x":-520,"y":-160,"width":280,"height":50}
+	],
+	"edges":[
+		{"id":"ee5046d294fcc3a5","fromNode":"d9c469a970a9a9a0","fromSide":"bottom","toNode":"5ea8467d991d3669","toSide":"top"},
+		{"id":"5cbfaddcfa54d79e","fromNode":"d9c469a970a9a9a0","fromSide":"bottom","toNode":"045c1873276eff8b","toSide":"top"},
+		{"id":"168e26c3ebd40ca7","fromNode":"d9c469a970a9a9a0","fromSide":"bottom","toNode":"727758330adf200e","toSide":"top"},
+		{"id":"1a09ddc550ce0605","fromNode":"d9c469a970a9a9a0","fromSide":"top","toNode":"ff5da1c5cb318fa9","toSide":"bottom"},
+		{"id":"03dfcafba550dd75","fromNode":"d9c469a970a9a9a0","fromSide":"top","toNode":"ea1052da089726d7","toSide":"bottom"}
+	]
+}

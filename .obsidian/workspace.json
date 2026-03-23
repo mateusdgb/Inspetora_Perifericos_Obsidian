@@ -12,18 +12,29 @@
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inspetora_Perifericos_Obsidian/modelo_eventos_interface.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "pinned": true,
               "icon": "lucide-file",
-              "title": "modelo_eventos_interface"
+              "title": "Nova aba"
+            }
+          },
+          {
+            "id": "140528bde7f5d1a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "interface_navegacao_atual/menus/menu_configuracoes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "menu_configuracoes"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,35 +196,44 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "52b264ec1f14d852",
+  "active": "140528bde7f5d1a7",
   "lastOpenFiles": [
-    "Evento CAL-02 — Capturar ponto da calibração de entrada.md",
-    "Inspetora_Perifericos_Obsidian/modelo_eventos_interface.md",
+    "navegação_interface.canvas",
+    "modelo_eventos_interface.md",
     "Inspetora_Perifericos_Obsidian/navegação_interface.canvas",
-    "Inspetora_Perifericos_Obsidian/visao_geral_interface.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/programas_de_inspecao.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/visão_computacional.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/persistencia_e_rastreabilidade.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/lógica_clp.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/lista_sensores.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/lista_atuadores.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/calibracao.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/diagrama_estados.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/bandejas_e_regioes_seguranca.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/arquitetura_sistema.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/fluxograma_operacao.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/fluxograma_segurança.md",
-    "Inspetora_Perifericos_Obsidian/visao_geral_planejamento/visão_geral.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras/ui_to_backend_mapping.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/menus/menu_calibracoes.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/menus/menu_configuracoes.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras/ui_state_rules.md",
+    "Inspetora_Perifericos_Obsidian/modelo_eventos_interface.md",
+    "visao_geral_planejamento/visão_geral.md",
+    "visao_geral_planejamento/visão_computacional.md",
+    "visao_geral_planejamento/programas_de_inspecao.md",
+    "visao_geral_planejamento/persistencia_e_rastreabilidade.md",
+    "visao_geral_planejamento/lógica_clp.md",
+    "visao_geral_planejamento/lista_sensores.md",
+    "visao_geral_planejamento/lista_atuadores.md",
+    "visao_geral_planejamento/lacunas_para_adaptacao_inspetora.md",
+    "visao_geral_planejamento/fluxograma_segurança.md",
+    "visao_geral_planejamento/fluxograma_operacao.md",
+    "visao_geral_planejamento/estrutura_codigo_existente.md",
+    "visao_geral_planejamento/diagrama_estados.md",
+    "visao_geral_planejamento/calibracao.md",
+    "visao_geral_planejamento/bandejas_e_regioes_seguranca.md",
+    "visao_geral_planejamento/arquitetura_sistema.md",
+    "visao_geral_planejamento",
+    "interface_navegacao_atual/telas/tela_projeto.md",
+    "interface_navegacao_atual/telas/tela_inspecao.md",
+    "interface_navegacao_atual/telas/tela_camera_fiducial.md",
+    "interface_navegacao_atual/telas/subaba_inspecao.md",
+    "interface_navegacao_atual/telas/subaba_imagem.md",
+    "interface_navegacao_atual/acoes/fluxo_configuracao_simulacao.md",
+    "interface_navegacao_atual/acoes/acao_testar_comunicacao_clp.md",
+    "interface_navegacao_atual/acoes/acao_salvar_programa_fiducial.md",
+    "interface_navegacao_atual/telas",
+    "interface_navegacao_atual/regras",
+    "interface_navegacao_atual/menus",
+    "interface_navegacao_atual/fluxos",
+    "interface_navegacao_atual/dialogos",
+    "interface_navegacao_atual/acoes",
+    "interface_navegacao_atual",
     "Inspetora_Perifericos_Obsidian/interface_navegacao/Sem título",
-    "Inspetora_Perifericos_Obsidian/README.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao/melhorias_interface.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao/lacunas_interface.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao/mapa_telas.md",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao/canvas_navegacao_interface.md"
+    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras"
   ]
 }
