@@ -4,37 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "c272d43b8410c37b",
+        "id": "fe2a7262c0727dc2",
         "type": "tabs",
         "children": [
           {
-            "id": "52b264ec1f14d852",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "empty",
-              "state": {},
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Nova aba"
-            }
-          },
-          {
-            "id": "140528bde7f5d1a7",
+            "id": "d8db4286337554b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "interface_navegacao_atual/menus/menu_configuracoes.md",
+                "file": "interface_navegacao_atual/acoes/acao_testar_comunicacao_clp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "menu_configuracoes"
+              "title": "acao_testar_comunicacao_clp"
+            }
+          },
+          {
+            "id": "4eca5d21c2c2d2e6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "interface_navegacao_atual/acoes/acao_abrir_velocidades_jog.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "acao_abrir_velocidades_jog"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -193,47 +194,49 @@
       "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Criar nova base": false
+      "bases:Criar nova base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "140528bde7f5d1a7",
+  "active": "d8db4286337554b4",
   "lastOpenFiles": [
-    "navegação_interface.canvas",
-    "modelo_eventos_interface.md",
-    "Inspetora_Perifericos_Obsidian/navegação_interface.canvas",
-    "Inspetora_Perifericos_Obsidian/modelo_eventos_interface.md",
-    "visao_geral_planejamento/visão_geral.md",
-    "visao_geral_planejamento/visão_computacional.md",
-    "visao_geral_planejamento/programas_de_inspecao.md",
-    "visao_geral_planejamento/persistencia_e_rastreabilidade.md",
-    "visao_geral_planejamento/lógica_clp.md",
-    "visao_geral_planejamento/lista_sensores.md",
-    "visao_geral_planejamento/lista_atuadores.md",
-    "visao_geral_planejamento/lacunas_para_adaptacao_inspetora.md",
-    "visao_geral_planejamento/fluxograma_segurança.md",
-    "visao_geral_planejamento/fluxograma_operacao.md",
-    "visao_geral_planejamento/estrutura_codigo_existente.md",
-    "visao_geral_planejamento/diagrama_estados.md",
-    "visao_geral_planejamento/calibracao.md",
-    "visao_geral_planejamento/bandejas_e_regioes_seguranca.md",
-    "visao_geral_planejamento/arquitetura_sistema.md",
-    "visao_geral_planejamento",
-    "interface_navegacao_atual/telas/tela_projeto.md",
-    "interface_navegacao_atual/telas/tela_inspecao.md",
-    "interface_navegacao_atual/telas/tela_camera_fiducial.md",
-    "interface_navegacao_atual/telas/subaba_inspecao.md",
-    "interface_navegacao_atual/telas/subaba_imagem.md",
     "interface_navegacao_atual/acoes/fluxo_configuracao_simulacao.md",
     "interface_navegacao_atual/acoes/acao_testar_comunicacao_clp.md",
     "interface_navegacao_atual/acoes/acao_salvar_programa_fiducial.md",
+    "interface_navegacao_atual/acoes/acao_salvar_configuracao_simulacao.md",
+    "interface_navegacao_atual/acoes/acao_salvar_configuracao_camera.md",
+    "interface_navegacao_atual/acoes/acao_salvar_alteracoes.md",
+    "interface_navegacao_atual/acoes/acao_reprovar_peca.md",
+    "interface_navegacao_atual/acoes/acao_programacao_rapida.md",
+    "interface_navegacao_atual/acoes/acao_parar_ciclo.md",
+    "interface_navegacao_atual/acoes/acao_novo_programa.md",
+    "interface_navegacao_atual/acoes/acao_nova_bandeja.md",
+    "interface_navegacao_atual/acoes/acao_inspecionar.md",
+    "interface_navegacao_atual/acoes/acao_iniciar_preview_camera.md",
+    "interface_navegacao_atual/acoes/acao_iniciar_ciclo.md",
+    "interface_navegacao_atual/acoes/acao_exportar_log_clp.md",
+    "interface_navegacao_atual/acoes/acao_ensinar_posicao_bandeja.md",
+    "interface_navegacao_atual/acoes/acao_desenhar_roi.md",
+    "interface_navegacao_atual/acoes/acao_definir_regiao_placa.md",
+    "interface_navegacao_atual/acoes/acao_definir_janela_azul.md",
+    "interface_navegacao_atual/acoes/acao_configurar_fiduciais_bandeja.md",
+    "interface_navegacao_atual/acoes/acao_conectar_ou_desconectar_clp.md",
+    "interface_navegacao_atual/acoes/acao_concluir_programa.md",
+    "interface_navegacao_atual/acoes/acao_carregar_programa_fiducial.md",
+    "interface_navegacao_atual/acoes/acao_carregar_programa.md",
+    "interface_navegacao_atual/acoes/acao_capturar_imagem.md",
+    "interface_navegacao_atual/acoes/acao_aprovar_peca.md",
+    "navegação_interface.canvas",
+    "Sem título.base",
+    "Sem título 1.base",
+    "interface_navegacao/acoes",
+    "interface_navegacao",
+    "Inspetora_Perifericos_Obsidian/navegação_interface.canvas",
+    "visao_geral_planejamento",
     "interface_navegacao_atual/telas",
     "interface_navegacao_atual/regras",
     "interface_navegacao_atual/menus",
     "interface_navegacao_atual/fluxos",
-    "interface_navegacao_atual/dialogos",
-    "interface_navegacao_atual/acoes",
-    "interface_navegacao_atual",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao/Sem título",
-    "Inspetora_Perifericos_Obsidian/interface_navegacao_atual/regras"
+    "interface_navegacao_atual/dialogos"
   ]
 }

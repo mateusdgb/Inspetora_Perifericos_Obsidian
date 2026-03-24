@@ -37,7 +37,3 @@ O tema não afeta a lógica de negócio, mas impacta:
 ## Ações relacionadas
 
 - [[acao_alterar_tema|Alterar Tema]]
-
-## Fluxo relacionado
-
-- [[interface_navegacao/fluxos/fluxo_configuracao_tema|Fluxo Configuração de Tema]]

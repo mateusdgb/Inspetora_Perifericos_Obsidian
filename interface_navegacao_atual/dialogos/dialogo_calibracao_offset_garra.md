@@ -139,9 +139,3 @@ Offset = Centro da Garra - Centro da Câmera
 ## Ações relacionadas
 
 - [[acao_abrir_calibracao_offset_garra|Abrir Calibração de Offset da Garra]]
-- [[interface_navegacao/acoes/acao_capturar_offset_garra|Capturar Ponto de Offset da Garra]]
-- [[interface_navegacao/acoes/acao_calcular_salvar_offset|Calcular e Salvar Offset]]
-
-## Fluxo relacionado
-
-- [[interface_navegacao/fluxos/fluxo_calibracao_offset_garra|Fluxo Calibração de Offset da Garra]]

@@ -121,15 +121,3 @@ Se os valores estiverem errados:
 
 - se existe uma tela por eixo ou seleção interna de eixo
 - se o valor é gravado no CLP, em arquivo, ou em ambos
-
----
-
-## Ações relacionadas
-
-- [[interface_navegacao/acoes/acao_abrir_calibracao_cnc|Abrir Calibração CNC]]
-- [[interface_navegacao/acoes/acao_calcular_steps_mm|Calcular Steps por mm]]
-- [[interface_navegacao/acoes/acao_salvar_calibracao_cnc|Salvar Calibração CNC]]
-
-## Fluxo relacionado
-
-- [[interface_navegacao/fluxos/fluxo_calibracao_cnc|Fluxo Calibração CNC]]

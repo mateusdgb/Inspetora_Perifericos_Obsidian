@@ -404,151 +404,277 @@ Cada item deve relacionar:
 
 ---
 
+
 ## Menu Configurações
 
-### CONF-MAP-01 — Conexão CLP
+### CONF-MAP-01 — Tema
 
-**Tela / Componente:** Menu Configurações → `Conexão CLP...`  
-**Evento:** clique
+**Tela / Componente:** Menu Configurações → `Tema`  
+**Evento:** seleção de Auto/Claro/Escuro
 
 **Controller provável:**
-- controller de configuração
+- settings/theme controller
 
 **Service / Manager provável:**
 - settings manager
-- PLC controller
 
 **Persistência:**
-- `settings.json` ou equivalente
+- preferência visual local
 
 **Saída esperada:**
-- diálogo de conexão aberto
+- tema aplicado na interface
 
 ---
 
-### CONF-MAP-02 — Simulação
+### CONF-MAP-02 — Configuração de Simulação
 
 **Tela / Componente:** Menu Configurações → `Simulação`  
-**Evento:** alternância
+**Evento:** clique / salvar
 
 **Controller provável:**
-- settings/config controller
+- controller de simulação/configuração
 
 **Service / Manager provável:**
 - settings manager
 - hardware orchestration
-
-**Hardware:**
-- troca entre driver real e simulado
-
-**Saída esperada:**
-- sistema em modo simulado ou real
-
----
-
-### CONF-MAP-03 — Cadastro de Bandejas
-
-**Tela / Componente:** Menu Configurações → `Cadastro de Bandejas...`  
-**Evento:** clique
-
-**Controller provável:**
-- controller de cadastro
-
-**Service / Manager provável:**
-- `tray_manager`
+- simulation manager/driver
 
 **Persistência:**
-- `bandejas.json`
+- configuração de modo simulado
+- multiplicador e opções de simulação
 
 **Saída esperada:**
-- diálogo/tela de bandejas aberta
+- sistema opera em modo real ou simulado
 
 ---
 
-## Configuração CLP
+### CONF-MAP-03 — Configuração de Câmeras
 
-### CLP-MAP-01 — Testar Comunicação
-
-**Tela / Componente:** Diálogo CLP → botão `Testar Comunicação`  
-**Evento:** clique
+**Tela / Componente:** Menu Configurações → `Configurar Câmeras...`  
+**Evento:** clique e ações internas
 
 **Controller provável:**
-- dialog/controller de conexão CLP
+- controller de câmeras/configuração
+
+**Service / Manager provável:**
+- camera manager
+- settings manager
+
+**Hardware / Visão:**
+- dispositivos de câmera
+- stream/preview
+
+**Persistência:**
+- papel lógico das câmeras
+- parâmetros de imagem
+
+**Saída esperada:**
+- câmeras configuradas e mapeadas ao sistema
+
+---
+
+### CONF-MAP-04 — Configuração CLP
+
+**Tela / Componente:** Menu Configurações → `Conexão CLP...`  
+**Evento:** clique e ações internas
+
+**Controller provável:**
+- controller de conexão CLP
 
 **Service / Manager provável:**
 - PLC controller/driver
+- hardware orchestration
+- settings manager
 
 **Persistência:**
-- log opcional
+- IP, porta, timeout, auto-connect
+- logs exportáveis
 
 **Saída esperada:**
-- resultado no log e feedback visual
+- comunicação com CLP pronta para uso
 
 ---
 
-### CLP-MAP-02 — Conectar
+### CONF-MAP-05 — Cadastro de Bandejas
 
-**Tela / Componente:** Diálogo CLP → botão `Conectar`  
-**Evento:** clique
+**Tela / Componente:** Menu Configurações → `Cadastro de Bandejas...`  
+**Evento:** clique e ações internas
 
 **Controller provável:**
-- dialog/controller de conexão
+- controller de cadastro de bandejas
 
 **Service / Manager provável:**
-- PLC controller
-- hardware orchestrator
+- `tray_manager`
+- manager de posição
+- manager de fiduciais, quando aplicável
+
+**Hardware / Visão:**
+- leitura de posição atual
+- eventualmente integração com fiduciais
 
 **Persistência:**
-- parâmetros de conexão
+- cadastro das bandejas
+- grid, garra, referência, fiduciais
 
 **Saída esperada:**
-- status conectado/desconectado
+- bandejas configuradas para uso no ciclo automático
+
+## Menu Calibrações
+
+### CAL-MAP-01 — Calibração de Entrada
+
+**Tela / Componente:** Menu Calibrações → `Calibração de Entrada...`  
+**Evento:** clique e ações internas
+
+**Controller provável:**
+- controller de calibração de entrada
+
+**Service / Manager provável:**
+- manager/calibration service
+- manager de posição
+
+**Hardware / Visão:**
+- câmera fiducial
+- PLC controller
+
+**Persistência:**
+- referência de centro da bandeja
+
+**Saída esperada:**
+- centro da bandeja calibrado e salvo
 
 ---
 
-## Calibração
+### CAL-MAP-02 — Calibração de Offset da Garra
 
-### CAL-MAP-01 — Abrir Calibrar Foco
+**Tela / Componente:** Menu Calibrações → `Calibrar Offset Garra...`  
+**Evento:** clique e capturas
+
+**Controller provável:**
+- controller de offset da garra
+
+**Service / Manager provável:**
+- calibration service
+- manager geométrico/offset
+
+**Hardware / Visão:**
+- câmera fiducial
+- PLC controller
+
+**Persistência:**
+- ΔX, ΔY, ΔZ da garra
+
+**Saída esperada:**
+- offset salvo para uso em correção de posicionamento
+
+---
+
+### CAL-MAP-03 — Calibração CNC
+
+**Tela / Componente:** Menu Calibrações → `Calibrar CNC...`  
+**Evento:** clique / edição / aplicar
+
+**Controller provável:**
+- controller de calibração CNC
+
+**Service / Manager provável:**
+- calibration/settings service
+
+**Hardware:**
+- opcionalmente PLC/controller
+
+**Persistência:**
+- configuração de steps/mm
+
+**Saída esperada:**
+- conversão pulsos ↔ mm ajustada
+
+---
+
+### CAL-MAP-04 — Calibração de Foco
 
 **Tela / Componente:** Menu Calibrações → `Calibrar Foco...`  
-**Evento:** clique
+**Evento:** clique e ações internas
 
 **Controller provável:**
-- controller de calibração
+- controller de calibração de foco
 
 **Service / Manager provável:**
 - calibration service
+- camera manager
+
+**Hardware / Visão:**
+- câmeras
+- PLC controller para pontos/movimento
+
+**Persistência:**
+- calibração de foco global ou local
 
 **Saída esperada:**
-- diálogo de calibração aberto
+- parâmetros de foco persistidos
 
 ---
 
-### CAL-MAP-02 — Salvar Calibração
+### CAL-MAP-05 — Calibração FOV
 
-**Tela / Componente:** Diálogo Calibração → botão `Salvar Calibração`  
-**Evento:** clique
+**Tela / Componente:** Menu Calibrações → `Calibrar FOV...`  
+**Evento:** clique / edição / salvar
 
 **Controller provável:**
-- controller de calibração
+- controller de FOV
 
 **Service / Manager provável:**
 - calibration service
 
 **Persistência:**
-- configuração global ou por projeto
+- modelo de campo de visão
 
 **Saída esperada:**
-- calibração persistida
+- relação Z ↔ largura/altura visível registrada
 
 ---
 
-## Observações finais
+### CAL-MAP-06 — Pontos Fiduciais
 
-Este documento ainda trabalha com **controller/service provável**, porque parte da navegação foi inferida a partir da interface e da estrutura do projeto.
+**Tela / Componente:** Menu Calibrações → `Pontos Fiduciais...`  
+**Evento:** clique e ações internas
 
-Ele deve ser refinado com:
+**Controller provável:**
+- controller de fiduciais
 
-- leitura dirigida do código-fonte de cada tela
-- mapeamento real de sinais/slots/event handlers
-- identificação exata dos módulos acionados por cada evento
+**Service / Manager provável:**
+- fiducial manager/service
+- calibration service
+
+**Hardware / Visão:**
+- câmera
+- PLC controller
+
+**Persistência:**
+- templates/imagens/posições/tolerância
+
+**Saída esperada:**
+- fiduciais configurados e disponíveis para alinhamento
+
+---
+
+### CAL-MAP-07 — Velocidades JOG
+
+**Tela / Componente:** Menu Calibrações → `Velocidades JOG...`  
+**Evento:** leitura/escrita
+
+**Controller provável:**
+- controller de velocidade/configuração
+
+**Service / Manager provável:**
+- PLC controller/driver
+- settings manager
+
+**Hardware:**
+- CLP
+
+**Persistência:**
+- parâmetros de velocidade no CLP e possivelmente no software
+
+**Saída esperada:**
+- velocidades de JOG atualizadas

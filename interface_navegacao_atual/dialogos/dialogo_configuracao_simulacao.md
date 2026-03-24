@@ -102,7 +102,3 @@ Essa configuração afeta:
 
 - [[acao_abrir_configuracao_simulacao|Abrir Configuração de Simulação]]
 - [[acao_salvar_configuracao_simulacao|Salvar Configuração de Simulação]]
-
-## Fluxo relacionado
-
-- [[interface_navegacao/fluxos/fluxo_configuracao_simulacao|Fluxo Configuração de Simulação]]

@@ -136,9 +136,6 @@ Isso é importante porque alguns ajustes podem ser:
   
 - [[acao_abrir_calibracao_foco|Abrir Calibração de Foco]]  
 - [[interface_navegacao/acoes/acao_live_foco|Ativar Live na Calibração de Foco]]  
-- [[interface_navegacao/acoes/acao_foto_foco|Capturar Foto na Calibração de Foco]]  
-- [[interface_navegacao/acoes/acao_salvar_calibracao_foco|Salvar Calibração de Foco]]  
-  
 ## Fluxo relacionado  
   
 - [[fluxo_calibracao_foco|Fluxo Calibração de Foco]]

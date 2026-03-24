@@ -62,8 +62,3 @@ Ela também deve:
 - orientar uma futura reimplementação em arquitetura mais limpa
 - alimentar uma LLM para geração de código
 
-## Documentos relacionados
-
-- [[interface_navegacao/mapa_telas|Mapa de Telas]]
-- [[interface_navegacao/lacunas_interface|Lacunas da Interface]]
-- [[interface_navegacao/melhorias_interface|Melhorias da Interface]]

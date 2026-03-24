@@ -108,9 +108,4 @@ Isso é muito importante porque velocidades inadequadas podem causar:
 ## Ações relacionadas  
   
 - [[acao_abrir_velocidades_jog|Abrir Velocidades JOG]]  
-- [[interface_navegacao/acoes/acao_ler_velocidades_clp|Ler Velocidades do CLP]]  
-- [[interface_navegacao/acoes/acao_escrever_velocidades_clp|Escrever Velocidades no CLP]]  
   
-## Fluxo relacionado  
-  
-- [[interface_navegacao/fluxos/fluxo_velocidades_jog|Fluxo Velocidades JOG]]

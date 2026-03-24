@@ -136,9 +136,5 @@ Essa tela é essencial para garantir:
 
 - [[acao_abrir_configuracao_cameras|Abrir Configuração de Câmeras]]
 - [[acao_iniciar_preview_camera|Iniciar Preview de Câmera]]
-- [[interface_navegacao/acoes/acao_aplicar_configuracao_camera|Aplicar Configuração de Câmera]]
 - [[acao_salvar_configuracao_camera|Salvar Configuração de Câmera]]
 
-## Fluxo relacionado
-
-- [[interface_navegacao/fluxos/fluxo_configuracao_cameras|Fluxo Configuração de Câmeras]]

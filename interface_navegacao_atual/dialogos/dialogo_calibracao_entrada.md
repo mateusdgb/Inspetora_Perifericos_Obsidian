@@ -135,9 +135,4 @@ Fecha a calibração sem persistir alterações.
 ## Ações relacionadas  
   
 - [[acao_abrir_calibracao_entrada|Abrir Calibração de Entrada]]  
-- [[interface_navegacao/acoes/acao_capturar_ponto_calibracao_entrada|Capturar Ponto da Calibração de Entrada]]  
-- [[interface_navegacao/acoes/acao_calcular_salvar_centro_bandeja|Calcular e Salvar Centro da Bandeja]]  
   
-## Fluxo relacionado  
-  
-- [[interface_navegacao/fluxos/fluxo_calibracao_entrada|Fluxo Calibração de Entrada]]

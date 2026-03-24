@@ -467,48 +467,190 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-## Menu Configurações / CLP
+---
 
-### Regra CONF-STATE-01 — Conexão CLP
+## Menu Configurações
 
-**Tela:** Diálogo Configuração CLP  
-**Componente:** `Conectar`, `Testar Comunicação`
+### Regra CONF-STATE-01 — Itens do menu Configurações
+
+**Tela:** Menu Configurações  
+**Componente:** itens do menu
+
+**Quando habilita:**
+- aplicação ativa
+- usuário com permissão adequada
+
+**Quando desabilita:**
+- modo restrito
+- operação crítica bloqueante, se a arquitetura decidir bloquear configurações durante produção
+
+---
+
+### Regra CONF-STATE-02 — Tema
+
+**Tela:** Menu Configurações  
+**Componente:** submenu `Tema`
+
+**Quando habilita:**
+- normalmente sempre
+
+**Quando desabilita:**
+- raramente, apenas em estado muito restrito
+
+---
+
+### Regra CONF-STATE-03 — Configuração de Simulação
+
+**Tela:** Configuração de Simulação  
+**Componente:** `Salvar`
+
+**Pré-condições:**
+- dados válidos
+
+**Quando habilita:**
+- sempre que o formulário estiver consistente
+
+**Quando desabilita:**
+- gravação em andamento
+- campos inválidos, se houver validação
+
+---
+
+### Regra CONF-STATE-04 — Configuração de Câmeras / Iniciar Preview
+
+**Tela:** Configuração de Câmeras  
+**Componente:** `Iniciar`
+
+**Pré-condições:**
+- câmera física selecionada
+
+**Quando habilita:**
+- quando houver dispositivo selecionado
+- preview não estiver ativo
+
+**Quando desabilita:**
+- sem câmera selecionada
+- preview já ativo
+
+---
+
+### Regra CONF-STATE-05 — Aplicar / Salvar Configuração de Câmera
+
+**Tela:** Configuração de Câmeras  
+**Componente:** `Aplicar`, `Salvar e Fechar`
+
+**Pré-condições:**
+- papel lógico definido, se obrigatório
+- parâmetros válidos
+
+**Quando habilita:**
+- após existir configuração coerente
+
+**Quando desabilita:**
+- dados inconsistentes
+- gravação em andamento
+
+---
+
+### Regra CONF-STATE-06 — Configuração CLP / Conectar
+
+**Tela:** Configuração CLP  
+**Componente:** `Conectar`
+
+**Pré-condições:**
+- IP, porta e timeout válidos
+
+**Quando habilita:**
+- estando desconectado
+- parâmetros mínimos preenchidos
+
+**Quando desabilita:**
+- já conectado
+- tentativa em andamento
+- parâmetros inválidos
+
+---
+
+### Regra CONF-STATE-07 — Configuração CLP / Desconectar
+
+**Tela:** Configuração CLP  
+**Componente:** `Desconectar`
+
+**Quando habilita:**
+- quando há conexão ativa
+
+**Quando desabilita:**
+- quando já está desconectado
+
+---
+
+### Regra CONF-STATE-08 — Testar Comunicação CLP
+
+**Tela:** Configuração CLP  
+**Componente:** `Testar Comunicação`
 
 **Quando habilita:**
 - parâmetros mínimos preenchidos
 
 **Quando desabilita:**
-- tentativa em andamento
-- campos obrigatórios inválidos
+- teste em andamento
+- parâmetros inválidos
 
 ---
 
----
+### Regra CONF-STATE-09 — Cadastro de Bandejas / Salvar
 
-## Menu Calibrações
+**Tela:** Cadastro de Bandejas  
+**Componente:** `Salvar`
 
-### Regra CAL-STATE-01 — Itens do menu Calibrações
-
-**Tela:** Menu Calibrações  
-**Componente:** itens do menu
+**Pré-condições:**
+- nome e tipo válidos
+- grid coerente
+- posição de referência válida, se obrigatória
 
 **Quando habilita:**
-- aplicação ativa
-- usuário com permissão de calibração/engenharia
+- quando a bandeja estiver consistente
 
 **Quando desabilita:**
-- ciclo automático crítico em execução, se a arquitetura bloquear calibração durante produção
-- emergência
-- modo operacional restrito
-
-**Ação ao interagir:**
-- abre a tela de calibração correspondente
+- dados incompletos ou inválidos
+- gravação em andamento
 
 ---
 
-## Calibração de Entrada
+### Regra CONF-STATE-10 — Cadastro de Bandejas / Ensinar Posição
 
-### Regra CAL-STATE-02 — Capturar Ponto 1
+**Tela:** Cadastro de Bandejas  
+**Componente:** `Ensinar Posição`
+
+**Pré-condições:**
+- hardware disponível ou simulação ativa
+- leitura de posição válida
+
+**Quando habilita:**
+- com contexto de movimento disponível
+
+**Quando desabilita:**
+- sem hardware/simulação
+- emergência
+
+---
+
+### Regra CONF-STATE-11 — Cadastro de Bandejas / Configurar Fiduciais
+
+**Tela:** Cadastro de Bandejas  
+**Componente:** `Configurar Fiduciais...`
+
+**Quando habilita:**
+- com bandeja em contexto
+- idealmente após dados mínimos da bandeja definidos
+
+**Quando desabilita:**
+- sem bandeja selecionada
+## Menu Calibrações
+
+### Calibração de Entrada
+
+#### Regra CAL-STATE-02 — Capturar Ponto 1
 
 **Tela:** Calibração de Entrada  
 **Componente:** `Capturar Ponto 1`
@@ -526,7 +668,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-03 — Capturar Ponto 2
+#### Regra CAL-STATE-03 — Capturar Ponto 2
 
 **Tela:** Calibração de Entrada  
 **Componente:** `Capturar Ponto 2`
@@ -544,7 +686,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-04 — Calcular e Salvar Centro da Bandeja
+#### Regra CAL-STATE-04 — Calcular e Salvar Centro da Bandeja
 
 **Tela:** Calibração de Entrada  
 **Componente:** `Calcular e Salvar`
@@ -561,9 +703,9 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-## Calibração de Offset da Garra
+### Calibração de Offset da Garra
 
-### Regra CAL-STATE-05 — Capturas da Garra/Câmera
+#### Regra CAL-STATE-05 — Capturas da Garra/Câmera
 
 **Tela:** Calibração Offset Garra  
 **Componente:** capturas de referência
@@ -582,7 +724,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-06 — Salvar Offset
+#### Regra CAL-STATE-06 — Salvar Offset
 
 **Tela:** Calibração Offset Garra  
 **Componente:** salvar/finalizar
@@ -600,9 +742,9 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-## Calibração CNC
+### Calibração CNC
 
-### Regra CAL-STATE-07 — Aplicar ao Controlador
+#### Regra CAL-STATE-07 — Aplicar ao Controlador
 
 **Tela:** Calibração CNC  
 **Componente:** `Aplicar ao Controlador`
@@ -619,7 +761,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-08 — Salvar e Fechar CNC
+#### Regra CAL-STATE-08 — Salvar e Fechar CNC
 
 **Tela:** Calibração CNC  
 **Componente:** `Salvar e Fechar`
@@ -633,9 +775,9 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-## Calibração de Foco
+### Calibração de Foco
 
-### Regra CAL-STATE-09 — Live/Foto
+#### Regra CAL-STATE-09 — Live/Foto
 
 **Tela:** Calibração de Foco  
 **Componente:** botões de live/foto
@@ -650,7 +792,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-10 — Ajuste de Foco
+#### Regra CAL-STATE-10 — Ajuste de Foco
 
 **Tela:** Calibração de Foco  
 **Componente:** slider de foco
@@ -664,7 +806,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-11 — Salvar Calibração de Foco
+#### Regra CAL-STATE-11 — Salvar Calibração de Foco
 
 **Tela:** Calibração de Foco  
 **Componente:** `Salvar Calibração`
@@ -683,9 +825,9 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-## Calibração FOV
+### Calibração FOV
 
-### Regra CAL-STATE-12 — Salvar FOV
+#### Regra CAL-STATE-12 — Salvar FOV
 
 **Tela:** Calibração FOV  
 **Componente:** `Salvar`
@@ -702,9 +844,9 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-## Pontos Fiduciais
+### Pontos Fiduciais
 
-### Regra CAL-STATE-13 — Capturar Fiducial
+#### Regra CAL-STATE-13 — Capturar Fiducial
 
 **Tela:** Pontos Fiduciais  
 **Componente:** `Capturar`
@@ -724,7 +866,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-14 — Ir Para Fiducial
+#### Regra CAL-STATE-14 — Ir Para Fiducial
 
 **Tela:** Pontos Fiduciais  
 **Componente:** `Ir Para`
@@ -741,7 +883,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-15 — Salvar Fiduciais
+#### Regra CAL-STATE-15 — Salvar Fiduciais
 
 **Tela:** Pontos Fiduciais  
 **Componente:** `Salvar`
@@ -755,9 +897,9 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-## Velocidades JOG
+### Velocidades JOG
 
-### Regra CAL-STATE-16 — Ler do CLP
+#### Regra CAL-STATE-16 — Ler do CLP
 
 **Tela:** Velocidades JOG  
 **Componente:** `Ler do CLP`
@@ -772,7 +914,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 
 ---
 
-### Regra CAL-STATE-17 — Escrever no CLP
+#### Regra CAL-STATE-17 — Escrever no CLP
 
 **Tela:** Velocidades JOG  
 **Componente:** `Escrever no CLP`
@@ -788,14 +930,3 @@ Os seguintes estados globais influenciam o comportamento da interface:
 - CLP offline
 - valores inválidos
 - escrita em andamento
-
----
-
-## Observações finais
-
-As regras acima devem ser refinadas futuramente com base em:
-
-- análise do código atual
-- testes reais da interface
-- comportamento observado durante navegação completa
-- decisões de arquitetura da futura reimplementação

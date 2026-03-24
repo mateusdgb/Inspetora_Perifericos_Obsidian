@@ -150,7 +150,3 @@ Essa tela é central para o fluxo automático da máquina, pois modela:
 - [[acao_ensinar_posicao_bandeja|Ensinar Posição da Bandeja]]
 - [[acao_configurar_fiduciais_bandeja|Configurar Fiduciais da Bandeja]]
 - [[acao_salvar_bandeja|Salvar Bandeja]]
-
-## Fluxo relacionado
-
-- [[interface_navegacao/fluxos/fluxo_cadastro_bandejas|Fluxo Cadastro de Bandejas]]

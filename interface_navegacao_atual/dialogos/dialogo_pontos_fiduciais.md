@@ -142,10 +142,4 @@ Isso pode ser usado para:
 ## Ações relacionadas  
   
 - [[acao_abrir_pontos_fiduciais|Abrir Configuração de Pontos Fiduciais]]  
-- [[interface_navegacao/acoes/acao_capturar_fiducial|Capturar Fiducial]]  
-- [[interface_navegacao/acoes/acao_ir_para_fiducial|Ir para Fiducial]]  
-- [[interface_navegacao/acoes/acao_salvar_fiduciais|Salvar Fiduciais]]  
   
-## Fluxo relacionado  
-  
-- [[interface_navegacao/fluxos/fluxo_pontos_fiduciais|Fluxo Pontos Fiduciais]]

@@ -102,8 +102,3 @@ Isso pode ser usado para:
 ## Ações relacionadas  
   
 - [[acao_abrir_calibracao_fov|Abrir Calibração de FOV]]  
-- [[interface_navegacao/acoes/acao_salvar_fov|Salvar Calibração de FOV]]  
-  
-## Fluxo relacionado  
-  
-- [[interface_navegacao/fluxos/fluxo_calibracao_fov|Fluxo Calibração de FOV]]
