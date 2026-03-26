@@ -2,11 +2,16 @@
 
 ## Descrição do Sistema
 
-A máquina inspetora tem como objetivo realizar a inspeção automatizada de periféricos presentes em placas de hardware de notebooks.
+A máquina inspetora tem como objetivo realizar a inspeção automatizada de
+periféricos presentes em placas de hardware de notebooks.
 
-O sistema captura placas armazenadas em bandejas, posiciona-as diante de câmeras de visão computacional e classifica cada placa como **aprovada ou reprovada**.
+O sistema captura placas armazenadas em bandejas, posiciona-as diante de
+câmeras de visão computacional e classifica cada placa como **aprovada ou
+reprovada**.
 
-A automação da máquina é realizada através de um **CLP**, responsável pelo controle de motores, sensores e segurança do sistema. A interface de operação e processamento de visão computacional são executados em **Python**.
+A automação da máquina é realizada através de um **CLP**, responsável pelo
+controle de motores, sensores e segurança do sistema. A interface de operação e
+processamento de visão computacional são executados em **Python**.
 
 ---
 
@@ -34,9 +39,9 @@ A automação da máquina é realizada através de um **CLP**, responsável pelo
 
 ### Sistema de Movimentação
 
-- Eixo X (horizontal)
-- Eixo Y (longitudinal)
-- Eixo Z (vertical)
+- Eixo X
+- Eixo Y
+- Eixo Z
 
 ### Sistema de Manipulação
 
@@ -44,8 +49,8 @@ A automação da máquina é realizada através de um **CLP**, responsável pelo
 
 ### Sistema de Visão
 
-- 1 câmera para alinhamento da garra (fiducial)
-- 3 câmeras para inspeção de periféricos
+- 1 câmera de alinhamento e apoio fiducial
+- 3 câmeras do fluxo principal de inspeção
 
 ### Sistema de Controle
 
@@ -54,23 +59,9 @@ A automação da máquina é realizada através de um **CLP**, responsável pelo
 
 ---
 
-## Objetivo da Inspeção
-
-Verificar se os periféricos presentes nas placas de notebook estão:
-
-- presentes
-- posicionados corretamente
-- montados corretamente
-
-Caso algum erro seja identificado, a placa é classificada como **reprovada**.
-
----
-
 ## Situação Atual do Projeto de Software
 
-O sistema da Inspetora de Periféricos já possui uma base de software previamente desenvolvida e adaptada de um projeto similar.
-
-Essa base já inclui funcionalidades implementadas ou parcialmente implementadas para:
+O sistema já possui uma base funcional para:
 
 - movimentação manual dos eixos X, Y e Z
 - comunicação com CLP via Modbus TCP
@@ -80,40 +71,39 @@ Essa base já inclui funcionalidades implementadas ou parcialmente implementadas
 - gerenciamento de bandejas
 - definição de regiões de segurança
 - controle de ciclo automático
-- retomada de ciclo interrompido
 - calibração
 - persistência de dados de produção e rastreabilidade
 
-A documentação desta pasta deve ser entendida como uma combinação de:
-
-- visão conceitual da máquina
-- visão do software já existente
-- visão das adaptações necessárias para o caso específico da Inspetora de Periféricos
+Esta pasta deve ser lida como documentação do estado atual do software e do
+domínio, não como redefinição da arquitetura já saneada no repositório.
 
 ---
 
 ## Câmeras da Inspetora
 
-Na configuração desejada da máquina, existem:
-
-- 1 câmera para posicionamento da garra e leitura de fiducial
-- 3 câmeras para inspeção de componentes:
-  - 1 câmera inferior
-  - 2 câmeras laterais
-
-No projeto atual do software, os papéis de câmera observados são:
+No estado atual do software, os papéis de câmera são:
 
 - `fiducial`
 - `top`
 - `bottom`
 - `side`
 
-Portanto, será necessária adaptação do modelo atual para suportar explicitamente duas câmeras laterais de inspeção.
+Regras:
+
+- `fiducial` é separada do fluxo principal de inspeção
+- `top`, `bottom` e `side` são as câmeras da inspeção principal
+- aliases de UI como `Câmera 1`, `Câmera 2` e `Câmera 3` devem ser lidos como
+  `top`, `bottom` e `side`
+
+Se houver proposta futura de outro arranjo físico de câmeras, ela deve ser
+documentada como evolução futura e não substituir esta descrição do estado
+atual.
 
 ---
 
 ## Navegação da Documentação
 
+- [[../estado_atual_codigo|Estado Atual do Código]]
 - [[arquitetura_sistema|Arquitetura do Sistema]]
 - [[fluxograma_operacao|Fluxograma de Operação]]
 - [[fluxograma_segurança|Fluxograma de Segurança]]
@@ -128,13 +118,3 @@ Portanto, será necessária adaptação do modelo atual para suportar explicitam
 - [[calibracao|Calibração]]
 - [[persistencia_e_rastreabilidade|Persistência e Rastreabilidade]]
 - [[lacunas_para_adaptacao_inspetora|Lacunas para Adaptação da Inspetora]]
-
----
-
-## Relação entre os Módulos
-
-A operação da máquina depende da integração entre [[lógica_clp]], [[visão_computacional]] e [[arquitetura_sistema]].
-
-O comportamento operacional detalhado está em [[fluxograma_operacao]], enquanto as restrições de proteção estão em [[fluxograma_segurança]].
-
-A definição física dos elementos de entrada e saída está em [[lista_sensores]] e [[lista_atuadores]].

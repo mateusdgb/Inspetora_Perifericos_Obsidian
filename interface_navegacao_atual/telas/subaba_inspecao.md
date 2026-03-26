@@ -1,94 +1,101 @@
-# Subaba: Inspeção 
+# Subaba: Inspeção
 
-## Tela  
-  
-[[tela_projeto|Tela Projeto]]  
+## Tela
 
-### Objetivo da subaba  
-  
-Permitir configurar como a inspeção será interpretada para a câmera e/ou item atual, definindo limiares, critérios de janela e parâmetros de similaridade.  
-  
-### Elementos observados  
-  
-#### Painel lateral direito — Configurações de Inspeção  
-  
-- **Programação Rápida**  
-- **Definir Janela Azul**  
-- **Adicionar Inspeção**  
-- **Aplicar Config**  
-- campo **Threshold**  
-- opção de cor:  
-- **Branco**  
-- **Preto**  
-- campo **% Mínimo**  
-- campo **Similaridade (%)**  
-- botão **Aplicar Similaridade**  
-  
-### Interpretação funcional inicial  
-  
-#### Programação Rápida  
-Provavelmente abre ou aplica um fluxo simplificado para configurar inspeções rapidamente, talvez baseado em valores padrão ou em presets.  
-  
-#### Definir Janela Azul  
-Indica a existência de uma região especial de inspeção, possivelmente uma janela de referência usada para detecção, alinhamento, contraste ou inspeção booleana.  
-  
-#### Adicionar Inspeção  
-Sugere a criação de uma nova regra/configuração de inspeção dentro da câmera ou ROI atual.  
-  
-#### Aplicar Config  
-Sugere persistir ou aplicar localmente os parâmetros definidos no painel de inspeção.  
-  
-#### Threshold  
-Provavelmente define um limiar para binarização, segmentação ou classificação de pixels.  
-  
-#### Branco / Preto  
-Indica o critério de polaridade da inspeção, isto é, se a análise espera predominância clara ou escura.  
-  
-#### % Mínimo  
-Provavelmente define a porcentagem mínima de preenchimento, cobertura ou presença para considerar a inspeção válida.  
-  
-#### Similaridade (%)  
-Provavelmente define o limiar mínimo de similaridade entre a imagem capturada e a referência esperada.  
-  
-#### Aplicar Similaridade  
-Provavelmente aplica o parâmetro de similaridade ao item, ROI ou inspeção corrente.  
-  
-### Hipótese de fluxo de uso da subaba Inspeção  
-  
-1. usuário seleciona a câmera desejada  
-2. usuário acessa a subaba **Inspeção**  
-3. usuário cria ou seleciona uma inspeção  
-4. define parâmetros como:  
-- threshold  
-- polaridade branco/preto  
-- % mínimo  
-- similaridade  
-5. opcionalmente define uma janela azul  
-6. aplica a configuração  
-7. salva as alterações do programa  
-  
-### Relação com o backend  
-  
-Essa subaba provavelmente conversa com:  
-  
-- controller de regiões/inspeção  
-- service/manager de inspeção  
-- comparador de periféricos  
-- persistência dos metadados do programa  
-  
-### Pontos em aberto  
-  
-Ainda precisam ser confirmados posteriormente:  
-  
-- o que exatamente é a **Janela Azul**  
-- se os parâmetros são aplicados por:  
-- câmera  
-- ROI  
-- componente  
-- regra de inspeção  
-- o que o botão **Programação Rápida** faz internamente  
-- se **Adicionar Inspeção** cria:  
-- uma nova regra  
-- uma nova janela  
-- um novo item de inspeção  
-- se **Aplicar Similaridade** é redundante com **Aplicar Config** ou se atua separadamente
+[[tela_projeto|Tela Projeto]]
+
+### Objetivo da subaba
+
+Permitir configurar como a inspeção será interpretada para a câmera e o
+componente atual, definindo janelas, limiares e parâmetros de similaridade.
+
+### Elementos observados
+
+#### Painel lateral direito - Configurações de Inspeção
+
+- **Programação Rápida**
+- **Definir Janela Azul**
+- **Adicionar Inspeção**
+- **Aplicar Config**
+- campo **Threshold**
+- opção de cor:
+- **Branco**
+- **Preto**
+- campo **% Mínimo**
+- campo **Similaridade (%)**
+- botão **Aplicar Similaridade**
+
+### Comportamento confirmado no código
+
+#### Programação Rápida
+
+Aplica configuração padrão aos componentes da câmera ativa:
+
+- janela azul padrão
+- similaridade mínima padrão de `95%`
+
+#### Definir Janela Azul
+
+Ativa o `BlueReferenceController` para desenhar a janela azul do componente
+selecionado.
+
+#### Adicionar Inspeção
+
+Ativa o `InspectionRegionController` para desenhar uma nova janela de inspeção
+para o componente selecionado, usando:
+
+- `threshold`
+- polaridade `Branco` ou `Preto`
+- `% Mínimo`
+
+#### Aplicar Config
+
+Aplica `threshold`, polaridade e `% Mínimo` a todas as janelas de inspeção do
+componente selecionado.
+
+#### Threshold
+
+Define o limiar numérico usado na configuração da inspeção.
+
+#### Branco / Preto
+
+Define a polaridade esperada na inspeção.
+
+#### % Mínimo
+
+Define o percentual mínimo exigido para a regra de inspeção.
+
+#### Similaridade (%)
+
+Define a similaridade mínima do componente selecionado.
+
+#### Aplicar Similaridade
+
+Atualiza a similaridade mínima do componente atual e, se existir janela azul,
+recorta e salva a imagem de referência correspondente.
+
+### Fluxo de uso confirmado da subaba Inspeção
+
+1. usuário seleciona a câmera desejada
+2. usuário acessa a subaba **Inspeção**
+3. usuário seleciona um componente
+4. define parâmetros como `threshold`, polaridade, `% mínimo` e `similaridade`
+5. opcionalmente define uma janela azul
+6. aplica a configuração
+7. salva as alterações do programa
+
+### Relação com o backend
+
+Essa subaba conversa com:
+
+- `InspectionRegionController`
+- `BlueReferenceController`
+- `ProgramManager`
+- persistência do programa e das imagens de referência
+
+### Pontos em aberto
+
+- semântica completa da **Janela Azul** no comparador final de visão
+- detalhes do formato persistido para todas as variações de inspeção
+- limite entre comportamento já operacional e partes ainda marcadas como fase
+  futura nos comentários do código

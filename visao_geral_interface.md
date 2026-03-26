@@ -1,11 +1,18 @@
 # Visão Geral da Interface
 
 ## Objetivo
-Documentar a interface atual do sistema de inspeção visual da Inspetora de Periféricos, com foco em:
+
+Documentar a interface atual do sistema de inspeção visual da Inspetora de
+Periféricos, com foco em:
+
 - navegação
 - ações do usuário
 - ações do sistema
-- organização futura para geração de código por LLM
+- organização do estado atual para evolução incremental
+
+Fonte de verdade externa do estado atual:
+
+- [[estado_atual_codigo]]
 
 ## Estrutura observada
 
@@ -20,17 +27,25 @@ A interface atual possui como navegação principal:
 ## Telas principais observadas
 
 ### Inspeção
-Tela voltada para execução do processo de inspeção, visualização das câmeras, carregamento de programa, início/parada de ciclo e decisão final da peça.
+
+Tela voltada para execução do processo de inspeção, visualização das câmeras,
+carregamento de programa, início/parada de ciclo e decisão final da peça.
 
 ### Projeto
-Tela voltada para criação e edição de programas de inspeção, captura de imagens, definição da região da placa, desenho de ROI e configuração de posições de captura.
+
+Tela voltada para criação e edição de programas de inspeção, captura de
+imagens, definição da região da placa, desenho de ROI e configuração de
+posições de captura.
 
 ### Câmera Fiducial
-Tela voltada para movimentação, visualização da câmera fiducial, cadastro/edição de posições e operação associada ao posicionamento da garra.
+
+Tela voltada para movimentação, visualização da câmera fiducial, cadastro e
+edição de posições e operação associada ao posicionamento da garra.
 
 ## Menus superiores observados
 
 ### Configurações
+
 Possui opções ligadas a:
 
 - tema
@@ -40,6 +55,7 @@ Possui opções ligadas a:
 - cadastro de bandejas
 
 ### Calibrações
+
 Possui opções ligadas a:
 
 - calibração de entrada
@@ -52,13 +68,9 @@ Possui opções ligadas a:
 
 ## Papel dessa documentação
 
-Essa documentação não deve apenas descrever a interface atual.
-
-Ela também deve:
+Essa documentação deve:
 
 - organizar o conhecimento da navegação
-- separar responsabilidades
-- identificar lacunas
-- orientar uma futura reimplementação em arquitetura mais limpa
-- alimentar uma LLM para geração de código
-
+- separar estado atual de backlog futuro
+- apontar lacunas reais sem reabrir arquitetura saneada
+- servir como base documental para evolução incremental

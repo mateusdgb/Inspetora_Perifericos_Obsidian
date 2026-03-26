@@ -10,6 +10,10 @@ Ele serve para:
 - orientar uma arquitetura futura mais organizada
 - alimentar LLM para geração de código com separação de responsabilidades
 
+Fonte de verdade externa do estado atual:
+
+- [[estado_atual_codigo]]
+
 ---
 
 ## Estrutura do mapeamento
@@ -43,7 +47,7 @@ Cada item deve relacionar:
 **Persistência:**
 - diretórios do programa
 - JSONs do projeto
-- estrutura inicial por câmera
+- estrutura inicial por role de câmera
 
 **Saída esperada:**
 - contexto do programa criado e carregado na tela
@@ -161,13 +165,13 @@ Cada item deve relacionar:
 **Evento:** troca de aba / edição de parâmetros
 
 **Controller provável:**
-- controller de configuração de inspeção
-- inspection region/controller associado
+- `InspectionRegionController`
+- `BlueReferenceController`
 
 **Service / Manager provável:**
+- `ProgramManager`
 - `inspection_service`
-- manager de inspeção
-- `peripheral_comparator`
+- managers de inspeção/projeto da tela ativa
 
 **Persistência:**
 - parâmetros de threshold
@@ -217,8 +221,8 @@ Cada item deve relacionar:
 
 **Service / Manager provável:**
 - `inspection_service`
-- manager de inspeção
-- comparador/configurador de inspeção
+- managers de inspeção da tela Projeto
+- persistência do programa atual
 
 **Persistência:**
 - parâmetros de inspeção no programa atual

@@ -16,6 +16,10 @@ Este documento serve como base para:
 - reorganização da arquitetura futura
 - alimentação de LLM para geração de código
 
+Fonte de verdade externa do estado atual:
+
+- [[estado_atual_codigo]]
+
 ---
 
 ## Estrutura de descrição de evento
@@ -330,7 +334,12 @@ Usuário alterna o contexto de edição entre as câmeras de inspeção.
 - falha ao restaurar contexto da câmera
 
 **Pontos em Aberto:**
-- mapeamento exato entre Câmera 1/2/3 e top/bottom/side
+- detalhes de persistência do contexto antes da troca de aba
+
+**Observação confirmada:**
+- `Câmera 1` = `top`
+- `Câmera 2` = `bottom`
+- `Câmera 3` = `side`
 
 ---
 

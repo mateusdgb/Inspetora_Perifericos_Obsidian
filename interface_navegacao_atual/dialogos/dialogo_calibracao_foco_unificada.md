@@ -2,7 +2,8 @@
 
 ## Objetivo
 
-Permitir calibrar foco e pontos de referência de múltiplas câmeras em uma única interface.
+Permitir calibrar foco e pontos de referência de múltiplas câmeras em uma única
+interface.
 
 Essa tela parece consolidar:
 
@@ -18,11 +19,11 @@ Essa tela parece consolidar:
 
 ### Abas superiores de câmera
 
-- Câmera 1 (Top)
-- Câmera 2 (Bottom)
-- Câmera 3 (Side)
-- Câmera 4 (Fiducial)
-- DUPLO (1 2)
+- `Câmera 1` = alias de `top`
+- `Câmera 2` = alias de `bottom`
+- `Câmera 3` = alias de `side`
+- `Câmera 4` = alias de `fiducial`
+- `DUPLO (1 2)` = modo combinado observado para `top` e `bottom`
 
 ### Área de preview
 
@@ -30,7 +31,7 @@ Mostra imagem ao vivo ou foto da câmera atual.
 
 No modo **DUPLO (1 2)**, a tela mostra duas áreas de imagem simultaneamente.
 
-### Botões de captura/visualização
+### Botões de captura e visualização
 
 Dependendo do modo:
 
@@ -40,11 +41,11 @@ Dependendo do modo:
 - Foto Bot
 - Ambas
 
-### Painel de Controle de Movimento (PLC)
+### Painel de Controle de Movimento
 
 Permite mover a máquina durante a calibração.
 
-### Painel Ajuste de Foco & Pontos
+### Painel Ajuste de Foco e Pontos
 
 Para a câmera ou câmeras atuais, exibe:
 
@@ -64,20 +65,23 @@ Para a câmera ou câmeras atuais, exibe:
 
 ## O que significa foco nesta tela
 
-Aqui, “foco” pode ter dois sentidos possíveis:
+Aqui, "foco" pode ter dois sentidos possíveis:
 
-1. **ajuste óptico real** da câmera/lente
-2. **ajuste operacional ligado ao posicionamento Z** ou a parâmetros associados ao foco percebido
+1. ajuste óptico real da câmera ou lente
+2. ajuste operacional ligado ao posicionamento Z ou a parâmetros associados ao
+   foco percebido
 
-A documentação futura deve confirmar qual dos dois está implementado no software atual.
+A documentação futura ainda precisa confirmar qual dos dois está implementado
+na tela ativa hoje.
 
 ---
 
 ## O que significam os Pontos A e B
 
-Os pontos A e B parecem ser posições previamente cadastradas ou usadas como referências de calibração.
+Os pontos A e B parecem ser posições previamente cadastradas ou usadas como
+referências de calibração.
 
-Esses pontos podem servir para:
+Eles podem servir para:
 
 - comparar nitidez em posições diferentes
 - validar foco em regiões distintas
@@ -87,27 +91,20 @@ Esses pontos podem servir para:
 
 ## O que significa o modo DUPLO (1 2)
 
-O modo DUPLO aparenta permitir calibração simultânea ou comparativa entre duas câmeras, provavelmente:
-
-- Top
-- Bottom
-
-Isso é útil quando se deseja alinhar ou comparar parâmetros das duas câmeras ao mesmo tempo.
+O modo DUPLO aparenta permitir calibração simultânea ou comparativa entre
+`top` e `bottom`.
 
 ---
 
 ## Escopos de salvamento
 
 ### Global (Todos)
-A calibração é aplicada como padrão geral da máquina/sistema.
+
+A calibração é aplicada como padrão geral da máquina ou sistema.
 
 ### Local (Este projeto)
+
 A calibração vale apenas para o projeto atual.
-
-Isso é importante porque alguns ajustes podem ser:
-
-- universais da máquina
-- específicos de um produto/programa
 
 ---
 
@@ -129,13 +126,5 @@ Isso é importante porque alguns ajustes podem ser:
 - se o foco é óptico real ou associado à posição
 - como pontos A e B são definidos
 - como o modo DUPLO é usado internamente
-
----
-
-## Ações relacionadas  
-  
-- [[acao_abrir_calibracao_foco|Abrir Calibração de Foco]]  
-- [[interface_navegacao/acoes/acao_live_foco|Ativar Live na Calibração de Foco]]  
-## Fluxo relacionado  
-  
-- [[fluxo_calibracao_foco|Fluxo Calibração de Foco]]
+- qual o caminho de código atual dessa tela, já que parte da documentação
+  histórica ainda usa nomes antigos

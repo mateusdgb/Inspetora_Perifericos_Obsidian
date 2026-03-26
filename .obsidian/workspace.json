@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "interface_navegacao_atual/acoes/acao_testar_comunicacao_clp.md",
+                "file": "visao_geral_interface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "acao_testar_comunicacao_clp"
+              "title": "visao_geral_interface"
             }
           },
           {
@@ -200,8 +200,13 @@
   },
   "active": "d8db4286337554b4",
   "lastOpenFiles": [
-    "interface_navegacao_atual/acoes/fluxo_configuracao_simulacao.md",
+    "regras_estado_interface.md",
+    "navegação_interface.canvas",
+    "modelo_eventos_interface.md",
+    "mapeamento_ui_para_backend.md",
+    "estado_atual_codigo.md",
     "interface_navegacao_atual/acoes/acao_testar_comunicacao_clp.md",
+    "interface_navegacao_atual/acoes/fluxo_configuracao_simulacao.md",
     "interface_navegacao_atual/acoes/acao_salvar_programa_fiducial.md",
     "interface_navegacao_atual/acoes/acao_salvar_configuracao_simulacao.md",
     "interface_navegacao_atual/acoes/acao_salvar_configuracao_camera.md",
@@ -221,12 +226,6 @@
     "interface_navegacao_atual/acoes/acao_definir_janela_azul.md",
     "interface_navegacao_atual/acoes/acao_configurar_fiduciais_bandeja.md",
     "interface_navegacao_atual/acoes/acao_conectar_ou_desconectar_clp.md",
-    "interface_navegacao_atual/acoes/acao_concluir_programa.md",
-    "interface_navegacao_atual/acoes/acao_carregar_programa_fiducial.md",
-    "interface_navegacao_atual/acoes/acao_carregar_programa.md",
-    "interface_navegacao_atual/acoes/acao_capturar_imagem.md",
-    "interface_navegacao_atual/acoes/acao_aprovar_peca.md",
-    "navegação_interface.canvas",
     "Sem título.base",
     "Sem título 1.base",
     "interface_navegacao/acoes",

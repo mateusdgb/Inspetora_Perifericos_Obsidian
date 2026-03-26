@@ -11,6 +11,10 @@ Ele serve para:
 - apoiar a definição de estados da aplicação
 - alimentar LLM para geração de código com regras de habilitação corretas
 
+Fonte de verdade externa do estado atual:
+
+- [[estado_atual_codigo]]
+
 ---
 
 ## Estrutura de Regra
@@ -138,7 +142,7 @@ Os seguintes estados globais influenciam o comportamento da interface:
 ### Regra PROJ-STATE-04 — Abas de câmera da Tela Projeto
 
 **Tela:** Projeto  
-**Componente:** `Câmera 1`, `Câmera 2`, `Câmera 3`
+**Componente:** aliases de UI `Câmera 1`, `Câmera 2`, `Câmera 3`
 
 **Pré-condições:**
 - contexto do programa disponível
@@ -156,6 +160,9 @@ Os seguintes estados globais influenciam o comportamento da interface:
 - troca o contexto ativo da câmera
 
 **Observações:**
+- `Câmera 1` = `top`
+- `Câmera 2` = `bottom`
+- `Câmera 3` = `side`
 - a troca deve preservar ou salvar contexto da câmera anterior
 
 ---
